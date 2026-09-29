@@ -1,0 +1,3052 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="id">
+<head>
+&lt;!-- PKBM Lam Alif: single-file deployment. CSS is embedded in this HTML. --&gt;
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PKBM Lam Alif - Sekolah Kesetaraan Resmi &amp; Terakreditasi</title>
+<!-- Tailwind CSS CDN -->
+
+
+<!-- FontAwesome for Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<!-- Google Fonts Inter -->
+
+
+<style>/*
+  1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+  2. Remove default margins and padding
+  3. Reset all borders.
+*/
+
+*,
+::after,
+::before,
+::backdrop,
+::file-selector-button {
+  box-sizing: border-box; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 2 */
+  border: 0 solid; /* 3 */
+}
+
+/*
+  1. Use a consistent sensible line-height in all browsers.
+  2. Prevent adjustments of font size after orientation changes in iOS.
+  3. Use a more readable tab size.
+  4. Use the user's configured `sans` font-family by default.
+  5. Use the user's configured `sans` font-feature-settings by default.
+  6. Use the user's configured `sans` font-variation-settings by default.
+  7. Disable tap highlights on iOS.
+*/
+
+html,
+:host {
+  line-height: 1.5; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  tab-size: 4; /* 3 */
+  font-family: --theme(
+    --default-font-family,
+    ui-sans-serif,
+    system-ui,
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    'Noto Color Emoji'
+  ); /* 4 */
+  font-feature-settings: --theme(--default-font-feature-settings, normal); /* 5 */
+  font-variation-settings: --theme(--default-font-variation-settings, normal); /* 6 */
+  -webkit-tap-highlight-color: transparent; /* 7 */
+}
+
+/*
+  1. Add the correct height in Firefox.
+  2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+  3. Reset the default border style to a 1px solid border.
+*/
+
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+  border-top-width: 1px; /* 3 */
+}
+
+/*
+  Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+
+/*
+  Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+  Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+}
+
+/*
+  Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+  1. Use the user's configured `mono` font-family by default.
+  2. Use the user's configured `mono` font-feature-settings by default.
+  3. Use the user's configured `mono` font-variation-settings by default.
+  4. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: --theme(
+    --default-mono-font-family,
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    'Liberation Mono',
+    'Courier New',
+    monospace
+  ); /* 1 */
+  font-feature-settings: --theme(--default-mono-font-feature-settings, normal); /* 2 */
+  font-variation-settings: --theme(--default-mono-font-variation-settings, normal); /* 3 */
+  font-size: 1em; /* 4 */
+}
+
+/*
+  Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+  Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+  1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+  2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+  3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+  border-collapse: collapse; /* 3 */
+}
+
+/*
+  Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+  Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+  Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+  Make lists unstyled by default.
+*/
+
+ol,
+ul,
+menu {
+  list-style: none;
+}
+
+/*
+  1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+  2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+      This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+}
+
+/*
+  Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/*
+  1. Inherit font styles in all browsers.
+  2. Remove border radius in all browsers.
+  3. Remove background color in all browsers.
+  4. Ensure consistent opacity for disabled states in all browsers.
+*/
+
+button,
+input,
+select,
+optgroup,
+textarea,
+::file-selector-button {
+  font: inherit; /* 1 */
+  font-feature-settings: inherit; /* 1 */
+  font-variation-settings: inherit; /* 1 */
+  letter-spacing: inherit; /* 1 */
+  color: inherit; /* 1 */
+  border-radius: 0; /* 2 */
+  background-color: transparent; /* 3 */
+  opacity: 1; /* 4 */
+}
+
+/*
+  Restore default font weight.
+*/
+
+:where(select:is([multiple], [size])) optgroup {
+  font-weight: bolder;
+}
+
+/*
+  Restore indentation.
+*/
+
+:where(select:is([multiple], [size])) optgroup option {
+  padding-inline-start: 20px;
+}
+
+/*
+  Restore space after button.
+*/
+
+::file-selector-button {
+  margin-inline-end: 4px;
+}
+
+/*
+  Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+*/
+
+::placeholder {
+  opacity: 1;
+}
+
+/*
+  Set the default placeholder color to a semi-transparent version of the current text color in browsers that do not
+  crash when using `color-mix(…)` with `currentcolor`. (https://github.com/tailwindlabs/tailwindcss/issues/17194)
+*/
+
+@supports (not (-webkit-appearance: -apple-pay-button)) /* Not Safari */ or
+  (contain-intrinsic-size: 1px) /* Safari 17+ */ {
+  ::placeholder {
+    color: color-mix(in oklab, currentcolor 50%, transparent);
+  }
+}
+
+/*
+  Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+  Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+  1. Ensure date/time inputs have the same height when empty in iOS Safari.
+  2. Ensure text alignment can be changed on date/time inputs in iOS Safari.
+*/
+
+::-webkit-date-and-time-value {
+  min-height: 1lh; /* 1 */
+  text-align: inherit; /* 2 */
+}
+
+/*
+  Prevent height from changing on date/time inputs in macOS Safari when the input is set to `display: block`.
+*/
+
+::-webkit-datetime-edit {
+  display: inline-flex;
+}
+
+/*
+  Remove excess padding from pseudo-elements in date/time inputs to ensure consistent height across browsers.
+*/
+
+::-webkit-datetime-edit-fields-wrapper {
+  padding: 0;
+}
+
+::-webkit-datetime-edit,
+::-webkit-datetime-edit-year-field,
+::-webkit-datetime-edit-month-field,
+::-webkit-datetime-edit-day-field,
+::-webkit-datetime-edit-hour-field,
+::-webkit-datetime-edit-minute-field,
+::-webkit-datetime-edit-second-field,
+::-webkit-datetime-edit-millisecond-field,
+::-webkit-datetime-edit-meridiem-field {
+  padding-block: 0;
+}
+
+/*
+  Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+  Correct the inability to style the border radius in iOS Safari.
+*/
+
+button,
+input:where([type='button'], [type='reset'], [type='submit']),
+::file-selector-button {
+  appearance: button;
+}
+
+/*
+  Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+  Make elements with the HTML hidden attribute stay hidden by default.
+*/
+
+[hidden]:where(:not([hidden='until-found'])) {
+  display: none !important;
+}
+
+/*! tailwindcss v4.1.10 | MIT License | https://tailwindcss.com */
+@layer properties;
+:root, :host {
+  --color-amber-400: oklch(82.8% 0.189 84.429);
+  --color-amber-500: oklch(76.9% 0.188 70.08);
+  --color-amber-600: oklch(66.6% 0.179 58.318);
+  --color-emerald-50: oklch(97.9% 0.021 166.113);
+  --color-emerald-100: oklch(95% 0.052 163.051);
+  --color-emerald-300: oklch(84.5% 0.143 164.978);
+  --color-emerald-400: oklch(76.5% 0.177 163.223);
+  --color-emerald-500: oklch(69.6% 0.17 162.48);
+  --color-emerald-600: oklch(59.6% 0.145 163.225);
+  --color-teal-500: oklch(70.4% 0.14 182.503);
+  --color-teal-600: oklch(60% 0.118 184.704);
+  --color-teal-700: oklch(51.1% 0.096 186.391);
+  --color-blue-50: oklch(97% 0.014 254.604);
+  --color-blue-200: oklch(88.2% 0.059 254.128);
+  --color-blue-400: oklch(70.7% 0.165 254.624);
+  --color-blue-500: oklch(62.3% 0.214 259.815);
+  --color-blue-600: oklch(54.6% 0.245 262.881);
+  --color-blue-700: oklch(48.8% 0.243 264.376);
+  --color-blue-900: oklch(37.9% 0.146 265.522);
+  --color-indigo-200: oklch(87% 0.065 274.039);
+  --color-indigo-500: oklch(58.5% 0.233 277.117);
+  --color-indigo-600: oklch(51.1% 0.262 276.966);
+  --color-indigo-900: oklch(35.9% 0.144 278.697);
+  --color-rose-400: oklch(71.2% 0.194 13.428);
+  --color-rose-500: oklch(64.5% 0.246 16.439);
+  --color-rose-600: oklch(58.6% 0.253 17.585);
+  --color-slate-50: oklch(98.4% 0.003 247.858);
+  --color-slate-100: oklch(96.8% 0.007 247.896);
+  --color-slate-200: oklch(92.9% 0.013 255.508);
+  --color-slate-300: oklch(86.9% 0.022 252.894);
+  --color-slate-400: oklch(70.4% 0.04 256.788);
+  --color-slate-500: oklch(55.4% 0.046 257.417);
+  --color-slate-600: oklch(44.6% 0.043 257.281);
+  --color-slate-700: oklch(37.2% 0.044 257.287);
+  --color-slate-800: oklch(27.9% 0.041 260.031);
+  --color-slate-900: oklch(20.8% 0.042 265.755);
+  --color-white: #fff;
+  --spacing: 0.25rem;
+  --container-md: 28rem;
+  --container-2xl: 42rem;
+  --container-3xl: 48rem;
+  --container-4xl: 56rem;
+  --container-7xl: 80rem;
+  --text-xs: 0.75rem;
+  --text-xs--line-height: calc(1 / 0.75);
+  --text-sm: 0.875rem;
+  --text-sm--line-height: calc(1.25 / 0.875);
+  --text-base: 1rem;
+  --text-base--line-height: calc(1.5 / 1);
+  --text-lg: 1.125rem;
+  --text-lg--line-height: calc(1.75 / 1.125);
+  --text-xl: 1.25rem;
+  --text-xl--line-height: calc(1.75 / 1.25);
+  --text-2xl: 1.5rem;
+  --text-2xl--line-height: calc(2 / 1.5);
+  --text-3xl: 1.875rem;
+  --text-3xl--line-height: calc(2.25 / 1.875);
+  --text-4xl: 2.25rem;
+  --text-4xl--line-height: calc(2.5 / 2.25);
+  --text-5xl: 3rem;
+  --text-5xl--line-height: 1;
+  --text-6xl: 3.75rem;
+  --text-6xl--line-height: 1;
+  --font-weight-light: 300;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+  --tracking-tight: -0.025em;
+  --tracking-wide: 0.025em;
+  --tracking-wider: 0.05em;
+  --leading-tight: 1.25;
+  --leading-relaxed: 1.625;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --blur-sm: 8px;
+  --blur-md: 12px;
+  --blur-xl: 24px;
+  --blur-2xl: 40px;
+  --blur-3xl: 64px;
+  --default-transition-duration: 150ms;
+  --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --color-primary: #0f172a;
+  --color-accent: #10b981;
+  --color-accent-hover: #059669;
+  --color-secondary-blue: #1e3a8a;
+}
+.pointer-events-none {
+  pointer-events: none;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+.relative {
+  position: relative;
+}
+.-inset-4 {
+  inset: calc(var(--spacing) * -4);
+}
+.inset-0 {
+  inset: calc(var(--spacing) * 0);
+}
+.-top-3 {
+  top: calc(var(--spacing) * -3);
+}
+.-top-4 {
+  top: calc(var(--spacing) * -4);
+}
+.top-0 {
+  top: calc(var(--spacing) * 0);
+}
+.top-1\/4 {
+  top: calc(1/4 * 100%);
+}
+.top-6 {
+  top: calc(var(--spacing) * 6);
+}
+.-right-4 {
+  right: calc(var(--spacing) * -4);
+}
+.-right-20 {
+  right: calc(var(--spacing) * -20);
+}
+.right-0 {
+  right: calc(var(--spacing) * 0);
+}
+.right-6 {
+  right: calc(var(--spacing) * 6);
+}
+.-bottom-20 {
+  bottom: calc(var(--spacing) * -20);
+}
+.-left-4 {
+  left: calc(var(--spacing) * -4);
+}
+.left-0 {
+  left: calc(var(--spacing) * 0);
+}
+.left-1\/2 {
+  left: calc(1/2 * 100%);
+}
+.z-10 {
+  z-index: 10;
+}
+.z-50 {
+  z-index: 50;
+}
+.mx-auto {
+  margin-inline: auto;
+}
+.mt-0\.5 {
+  margin-top: calc(var(--spacing) * 0.5);
+}
+.mt-1 {
+  margin-top: calc(var(--spacing) * 1);
+}
+.mt-2 {
+  margin-top: calc(var(--spacing) * 2);
+}
+.mt-4 {
+  margin-top: calc(var(--spacing) * 4);
+}
+.mt-6 {
+  margin-top: calc(var(--spacing) * 6);
+}
+.mb-2 {
+  margin-bottom: calc(var(--spacing) * 2);
+}
+.mb-4 {
+  margin-bottom: calc(var(--spacing) * 4);
+}
+.mb-6 {
+  margin-bottom: calc(var(--spacing) * 6);
+}
+.mb-8 {
+  margin-bottom: calc(var(--spacing) * 8);
+}
+.mb-12 {
+  margin-bottom: calc(var(--spacing) * 12);
+}
+.mb-16 {
+  margin-bottom: calc(var(--spacing) * 16);
+}
+.ml-2 {
+  margin-left: calc(var(--spacing) * 2);
+}
+.block {
+  display: block;
+}
+.flex {
+  display: flex;
+}
+.grid {
+  display: grid;
+}
+.hidden {
+  display: none;
+}
+.inline-flex {
+  display: inline-flex;
+}
+.aspect-\[4\/3\] {
+  aspect-ratio: 4/3;
+}
+.h-10 {
+  height: calc(var(--spacing) * 10);
+}
+.h-11 {
+  height: calc(var(--spacing) * 11);
+}
+.h-12 {
+  height: calc(var(--spacing) * 12);
+}
+.h-14 {
+  height: calc(var(--spacing) * 14);
+}
+.h-16 {
+  height: calc(var(--spacing) * 16);
+}
+.h-20 {
+  height: calc(var(--spacing) * 20);
+}
+.h-96 {
+  height: calc(var(--spacing) * 96);
+}
+.h-\[600px\] {
+  height: 600px;
+}
+.h-full {
+  height: 100%;
+}
+.w-10 {
+  width: calc(var(--spacing) * 10);
+}
+.w-11 {
+  width: calc(var(--spacing) * 11);
+}
+.w-12 {
+  width: calc(var(--spacing) * 12);
+}
+.w-14 {
+  width: calc(var(--spacing) * 14);
+}
+.w-16 {
+  width: calc(var(--spacing) * 16);
+}
+.w-96 {
+  width: calc(var(--spacing) * 96);
+}
+.w-\[600px\] {
+  width: 600px;
+}
+.w-full {
+  width: 100%;
+}
+.max-w-2xl {
+  max-width: var(--container-2xl);
+}
+.max-w-3xl {
+  max-width: var(--container-3xl);
+}
+.max-w-4xl {
+  max-width: var(--container-4xl);
+}
+.max-w-7xl {
+  max-width: var(--container-7xl);
+}
+.max-w-md {
+  max-width: var(--container-md);
+}
+.flex-1 {
+  flex: 1;
+}
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
+.-translate-x-1\/2 {
+  --tw-translate-x: calc(calc(1/2 * 100%) * -1);
+  translate: var(--tw-translate-x) var(--tw-translate-y);
+}
+.-translate-y-1\/2 {
+  --tw-translate-y: calc(calc(1/2 * 100%) * -1);
+  translate: var(--tw-translate-x) var(--tw-translate-y);
+}
+.scale-95 {
+  --tw-scale-x: 95%;
+  --tw-scale-y: 95%;
+  --tw-scale-z: 95%;
+  scale: var(--tw-scale-x) var(--tw-scale-y);
+}
+.transform {
+  transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+}
+.list-disc {
+  list-style-type: disc;
+}
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.flex-col {
+  flex-direction: column;
+}
+.items-center {
+  align-items: center;
+}
+.items-end {
+  align-items: flex-end;
+}
+.items-start {
+  align-items: flex-start;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-center {
+  justify-content: center;
+}
+.gap-2 {
+  gap: calc(var(--spacing) * 2);
+}
+.gap-3 {
+  gap: calc(var(--spacing) * 3);
+}
+.gap-3\.5 {
+  gap: calc(var(--spacing) * 3.5);
+}
+.gap-4 {
+  gap: calc(var(--spacing) * 4);
+}
+.gap-6 {
+  gap: calc(var(--spacing) * 6);
+}
+.gap-8 {
+  gap: calc(var(--spacing) * 8);
+}
+.gap-12 {
+  gap: calc(var(--spacing) * 12);
+}
+.space-y-1 {
+  :where(& > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 1) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 1) * calc(1 - var(--tw-space-y-reverse)));
+  }
+}
+.space-y-2\.5 {
+  :where(& > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 2.5) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 2.5) * calc(1 - var(--tw-space-y-reverse)));
+  }
+}
+.space-y-3 {
+  :where(& > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 3) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-y-reverse)));
+  }
+}
+.space-y-3\.5 {
+  :where(& > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 3.5) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 3.5) * calc(1 - var(--tw-space-y-reverse)));
+  }
+}
+.space-y-4 {
+  :where(& > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
+  }
+}
+.space-y-6 {
+  :where(& > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 6) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-y-reverse)));
+  }
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+.rounded-2xl {
+  border-radius: var(--radius-2xl);
+}
+.rounded-3xl {
+  border-radius: var(--radius-3xl);
+}
+.rounded-full {
+  border-radius: calc(infinity * 1px);
+}
+.rounded-lg {
+  border-radius: var(--radius-lg);
+}
+.rounded-xl {
+  border-radius: var(--radius-xl);
+}
+.border {
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+}
+.border-2 {
+  border-style: var(--tw-border-style);
+  border-width: 2px;
+}
+.border-y {
+  border-block-style: var(--tw-border-style);
+  border-block-width: 1px;
+}
+.border-t {
+  border-top-style: var(--tw-border-style);
+  border-top-width: 1px;
+}
+.border-b {
+  border-bottom-style: var(--tw-border-style);
+  border-bottom-width: 1px;
+}
+.border-accent {
+  border-color: var(--color-accent);
+}
+.border-emerald-500\/30 {
+  border-color: color-mix(in srgb, oklch(69.6% 0.17 162.48) 30%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    border-color: color-mix(in oklab, var(--color-emerald-500) 30%, transparent);
+  }
+}
+.border-slate-100 {
+  border-color: var(--color-slate-100);
+}
+.border-slate-200 {
+  border-color: var(--color-slate-200);
+}
+.border-slate-200\/60 {
+  border-color: color-mix(in srgb, oklch(92.9% 0.013 255.508) 60%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    border-color: color-mix(in oklab, var(--color-slate-200) 60%, transparent);
+  }
+}
+.border-slate-200\/80 {
+  border-color: color-mix(in srgb, oklch(92.9% 0.013 255.508) 80%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    border-color: color-mix(in oklab, var(--color-slate-200) 80%, transparent);
+  }
+}
+.border-slate-800 {
+  border-color: var(--color-slate-800);
+}
+.border-white\/10 {
+  border-color: color-mix(in srgb, #fff 10%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    border-color: color-mix(in oklab, var(--color-white) 10%, transparent);
+  }
+}
+.border-white\/15 {
+  border-color: color-mix(in srgb, #fff 15%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    border-color: color-mix(in oklab, var(--color-white) 15%, transparent);
+  }
+}
+.border-white\/20 {
+  border-color: color-mix(in srgb, #fff 20%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    border-color: color-mix(in oklab, var(--color-white) 20%, transparent);
+  }
+}
+.bg-accent {
+  background-color: var(--color-accent);
+}
+.bg-accent\/10 {
+  background-color: color-mix(in srgb, #10b981 10%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-accent) 10%, transparent);
+  }
+}
+.bg-accent\/15 {
+  background-color: color-mix(in srgb, #10b981 15%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-accent) 15%, transparent);
+  }
+}
+.bg-accent\/20 {
+  background-color: color-mix(in srgb, #10b981 20%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-accent) 20%, transparent);
+  }
+}
+.bg-amber-500\/10 {
+  background-color: color-mix(in srgb, oklch(76.9% 0.188 70.08) 10%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-amber-500) 10%, transparent);
+  }
+}
+.bg-amber-500\/20 {
+  background-color: color-mix(in srgb, oklch(76.9% 0.188 70.08) 20%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-amber-500) 20%, transparent);
+  }
+}
+.bg-blue-50 {
+  background-color: var(--color-blue-50);
+}
+.bg-blue-500\/10 {
+  background-color: color-mix(in srgb, oklch(62.3% 0.214 259.815) 10%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-blue-500) 10%, transparent);
+  }
+}
+.bg-blue-500\/20 {
+  background-color: color-mix(in srgb, oklch(62.3% 0.214 259.815) 20%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-blue-500) 20%, transparent);
+  }
+}
+.bg-emerald-50 {
+  background-color: var(--color-emerald-50);
+}
+.bg-emerald-100 {
+  background-color: var(--color-emerald-100);
+}
+.bg-emerald-500\/10 {
+  background-color: color-mix(in srgb, oklch(69.6% 0.17 162.48) 10%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-emerald-500) 10%, transparent);
+  }
+}
+.bg-emerald-500\/20 {
+  background-color: color-mix(in srgb, oklch(69.6% 0.17 162.48) 20%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-emerald-500) 20%, transparent);
+  }
+}
+.bg-indigo-500\/10 {
+  background-color: color-mix(in srgb, oklch(58.5% 0.233 277.117) 10%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-indigo-500) 10%, transparent);
+  }
+}
+.bg-primary {
+  background-color: var(--color-primary);
+}
+.bg-rose-500\/10 {
+  background-color: color-mix(in srgb, oklch(64.5% 0.246 16.439) 10%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-rose-500) 10%, transparent);
+  }
+}
+.bg-rose-500\/20 {
+  background-color: color-mix(in srgb, oklch(64.5% 0.246 16.439) 20%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-rose-500) 20%, transparent);
+  }
+}
+.bg-slate-50 {
+  background-color: var(--color-slate-50);
+}
+.bg-slate-100\/70 {
+  background-color: color-mix(in srgb, oklch(96.8% 0.007 247.896) 70%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-slate-100) 70%, transparent);
+  }
+}
+.bg-slate-900 {
+  background-color: var(--color-slate-900);
+}
+.bg-slate-900\/60 {
+  background-color: color-mix(in srgb, oklch(20.8% 0.042 265.755) 60%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-slate-900) 60%, transparent);
+  }
+}
+.bg-teal-500\/10 {
+  background-color: color-mix(in srgb, oklch(70.4% 0.14 182.503) 10%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-teal-500) 10%, transparent);
+  }
+}
+.bg-white {
+  background-color: var(--color-white);
+}
+.bg-white\/5 {
+  background-color: color-mix(in srgb, #fff 5%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-white) 5%, transparent);
+  }
+}
+.bg-white\/10 {
+  background-color: color-mix(in srgb, #fff 10%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-white) 10%, transparent);
+  }
+}
+.bg-white\/20 {
+  background-color: color-mix(in srgb, #fff 20%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-white) 20%, transparent);
+  }
+}
+.bg-white\/95 {
+  background-color: color-mix(in srgb, #fff 95%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    background-color: color-mix(in oklab, var(--color-white) 95%, transparent);
+  }
+}
+.bg-gradient-to-b {
+  --tw-gradient-position: to bottom in oklab;
+  background-image: linear-gradient(var(--tw-gradient-stops));
+}
+.bg-gradient-to-br {
+  --tw-gradient-position: to bottom right in oklab;
+  background-image: linear-gradient(var(--tw-gradient-stops));
+}
+.bg-gradient-to-r {
+  --tw-gradient-position: to right in oklab;
+  background-image: linear-gradient(var(--tw-gradient-stops));
+}
+.bg-gradient-to-t {
+  --tw-gradient-position: to top in oklab;
+  background-image: linear-gradient(var(--tw-gradient-stops));
+}
+.bg-\[radial-gradient\(\#10b981_1px\,transparent_1px\)\] {
+  background-image: radial-gradient(#10b981 1px,transparent 1px);
+}
+.from-accent\/20 {
+  --tw-gradient-from: color-mix(in srgb, #10b981 20%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    --tw-gradient-from: color-mix(in oklab, var(--color-accent) 20%, transparent);
+  }
+  --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+}
+.from-blue-700 {
+  --tw-gradient-from: var(--color-blue-700);
+  --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+}
+.from-emerald-500 {
+  --tw-gradient-from: var(--color-emerald-500);
+  --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+}
+.from-primary {
+  --tw-gradient-from: var(--color-primary);
+  --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+}
+.from-primary\/80 {
+  --tw-gradient-from: color-mix(in srgb, #0f172a 80%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    --tw-gradient-from: color-mix(in oklab, var(--color-primary) 80%, transparent);
+  }
+  --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+}
+.from-slate-900 {
+  --tw-gradient-from: var(--color-slate-900);
+  --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+}
+.via-primary {
+  --tw-gradient-via: var(--color-primary);
+  --tw-gradient-via-stops: var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-via-stops);
+}
+.via-transparent {
+  --tw-gradient-via: transparent;
+  --tw-gradient-via-stops: var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-via-stops);
+}
+.to-blue-500\/20 {
+  --tw-gradient-to: color-mix(in srgb, oklch(62.3% 0.214 259.815) 20%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    --tw-gradient-to: color-mix(in oklab, var(--color-blue-500) 20%, transparent);
+  }
+  --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+}
+.to-indigo-900 {
+  --tw-gradient-to: var(--color-indigo-900);
+  --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+}
+.to-secondary-blue {
+  --tw-gradient-to: var(--color-secondary-blue);
+  --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+}
+.to-teal-600 {
+  --tw-gradient-to: var(--color-teal-600);
+  --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+}
+.to-teal-700 {
+  --tw-gradient-to: var(--color-teal-700);
+  --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+}
+.to-transparent {
+  --tw-gradient-to: transparent;
+  --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+}
+.\[background-size\:16px_16px\] {
+  background-size: 16px 16px;
+}
+.object-cover {
+  object-fit: cover;
+}
+.p-2\.5 {
+  padding: calc(var(--spacing) * 2.5);
+}
+.p-3\.5 {
+  padding: calc(var(--spacing) * 3.5);
+}
+.p-4 {
+  padding: calc(var(--spacing) * 4);
+}
+.p-6 {
+  padding: calc(var(--spacing) * 6);
+}
+.p-8 {
+  padding: calc(var(--spacing) * 8);
+}
+.px-3 {
+  padding-inline: calc(var(--spacing) * 3);
+}
+.px-3\.5 {
+  padding-inline: calc(var(--spacing) * 3.5);
+}
+.px-4 {
+  padding-inline: calc(var(--spacing) * 4);
+}
+.px-5 {
+  padding-inline: calc(var(--spacing) * 5);
+}
+.px-6 {
+  padding-inline: calc(var(--spacing) * 6);
+}
+.px-8 {
+  padding-inline: calc(var(--spacing) * 8);
+}
+.py-1 {
+  padding-block: calc(var(--spacing) * 1);
+}
+.py-1\.5 {
+  padding-block: calc(var(--spacing) * 1.5);
+}
+.py-2 {
+  padding-block: calc(var(--spacing) * 2);
+}
+.py-2\.5 {
+  padding-block: calc(var(--spacing) * 2.5);
+}
+.py-3 {
+  padding-block: calc(var(--spacing) * 3);
+}
+.py-3\.5 {
+  padding-block: calc(var(--spacing) * 3.5);
+}
+.py-4 {
+  padding-block: calc(var(--spacing) * 4);
+}
+.py-20 {
+  padding-block: calc(var(--spacing) * 20);
+}
+.pt-2 {
+  padding-top: calc(var(--spacing) * 2);
+}
+.pt-4 {
+  padding-top: calc(var(--spacing) * 4);
+}
+.pt-8 {
+  padding-top: calc(var(--spacing) * 8);
+}
+.pt-16 {
+  padding-top: calc(var(--spacing) * 16);
+}
+.pt-32 {
+  padding-top: calc(var(--spacing) * 32);
+}
+.pb-2 {
+  padding-bottom: calc(var(--spacing) * 2);
+}
+.pb-6 {
+  padding-bottom: calc(var(--spacing) * 6);
+}
+.pb-12 {
+  padding-bottom: calc(var(--spacing) * 12);
+}
+.pb-20 {
+  padding-bottom: calc(var(--spacing) * 20);
+}
+.pl-5 {
+  padding-left: calc(var(--spacing) * 5);
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-2xl {
+  font-size: var(--text-2xl);
+  line-height: var(--tw-leading, var(--text-2xl--line-height));
+}
+.text-3xl {
+  font-size: var(--text-3xl);
+  line-height: var(--tw-leading, var(--text-3xl--line-height));
+}
+.text-4xl {
+  font-size: var(--text-4xl);
+  line-height: var(--tw-leading, var(--text-4xl--line-height));
+}
+.text-base {
+  font-size: var(--text-base);
+  line-height: var(--tw-leading, var(--text-base--line-height));
+}
+.text-lg {
+  font-size: var(--text-lg);
+  line-height: var(--tw-leading, var(--text-lg--line-height));
+}
+.text-sm {
+  font-size: var(--text-sm);
+  line-height: var(--tw-leading, var(--text-sm--line-height));
+}
+.text-xl {
+  font-size: var(--text-xl);
+  line-height: var(--tw-leading, var(--text-xl--line-height));
+}
+.text-xs {
+  font-size: var(--text-xs);
+  line-height: var(--tw-leading, var(--text-xs--line-height));
+}
+.text-\[11px\] {
+  font-size: 11px;
+}
+.leading-relaxed {
+  --tw-leading: var(--leading-relaxed);
+  line-height: var(--leading-relaxed);
+}
+.leading-tight {
+  --tw-leading: var(--leading-tight);
+  line-height: var(--leading-tight);
+}
+.font-black {
+  --tw-font-weight: var(--font-weight-black);
+  font-weight: var(--font-weight-black);
+}
+.font-bold {
+  --tw-font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-bold);
+}
+.font-extrabold {
+  --tw-font-weight: var(--font-weight-extrabold);
+  font-weight: var(--font-weight-extrabold);
+}
+.font-light {
+  --tw-font-weight: var(--font-weight-light);
+  font-weight: var(--font-weight-light);
+}
+.font-medium {
+  --tw-font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-medium);
+}
+.font-semibold {
+  --tw-font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-semibold);
+}
+.tracking-tight {
+  --tw-tracking: var(--tracking-tight);
+  letter-spacing: var(--tracking-tight);
+}
+.tracking-wide {
+  --tw-tracking: var(--tracking-wide);
+  letter-spacing: var(--tracking-wide);
+}
+.tracking-wider {
+  --tw-tracking: var(--tracking-wider);
+  letter-spacing: var(--tracking-wider);
+}
+.text-accent {
+  color: var(--color-accent);
+}
+.text-amber-400 {
+  color: var(--color-amber-400);
+}
+.text-amber-600 {
+  color: var(--color-amber-600);
+}
+.text-blue-200 {
+  color: var(--color-blue-200);
+}
+.text-blue-400 {
+  color: var(--color-blue-400);
+}
+.text-blue-600 {
+  color: var(--color-blue-600);
+}
+.text-blue-700 {
+  color: var(--color-blue-700);
+}
+.text-emerald-100 {
+  color: var(--color-emerald-100);
+}
+.text-emerald-300 {
+  color: var(--color-emerald-300);
+}
+.text-emerald-400 {
+  color: var(--color-emerald-400);
+}
+.text-emerald-500 {
+  color: var(--color-emerald-500);
+}
+.text-emerald-600 {
+  color: var(--color-emerald-600);
+}
+.text-indigo-200 {
+  color: var(--color-indigo-200);
+}
+.text-indigo-600 {
+  color: var(--color-indigo-600);
+}
+.text-primary {
+  color: var(--color-primary);
+}
+.text-rose-400 {
+  color: var(--color-rose-400);
+}
+.text-rose-600 {
+  color: var(--color-rose-600);
+}
+.text-slate-300 {
+  color: var(--color-slate-300);
+}
+.text-slate-400 {
+  color: var(--color-slate-400);
+}
+.text-slate-500 {
+  color: var(--color-slate-500);
+}
+.text-slate-600 {
+  color: var(--color-slate-600);
+}
+.text-slate-700 {
+  color: var(--color-slate-700);
+}
+.text-slate-800 {
+  color: var(--color-slate-800);
+}
+.text-teal-600 {
+  color: var(--color-teal-600);
+}
+.text-white {
+  color: var(--color-white);
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.underline {
+  text-decoration-line: underline;
+}
+.decoration-emerald-500\/40 {
+  text-decoration-color: color-mix(in srgb, oklch(69.6% 0.17 162.48) 40%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    text-decoration-color: color-mix(in oklab, var(--color-emerald-500) 40%, transparent);
+  }
+}
+.decoration-wavy {
+  text-decoration-style: wavy;
+}
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.opacity-0 {
+  opacity: 0%;
+}
+.opacity-10 {
+  opacity: 10%;
+}
+.opacity-90 {
+  opacity: 90%;
+}
+.shadow-2xl {
+  --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+}
+.shadow-inner {
+  --tw-shadow: inset 0 2px 4px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.05));
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+}
+.shadow-lg {
+  --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+}
+.shadow-md {
+  --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+}
+.shadow-sm {
+  --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+}
+.shadow-xl {
+  --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+}
+.shadow-blue-900\/20 {
+  --tw-shadow-color: color-mix(in srgb, oklch(37.9% 0.146 265.522) 20%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-blue-900) 20%, transparent) var(--tw-shadow-alpha), transparent);
+  }
+}
+.shadow-emerald-500\/20 {
+  --tw-shadow-color: color-mix(in srgb, oklch(69.6% 0.17 162.48) 20%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-emerald-500) 20%, transparent) var(--tw-shadow-alpha), transparent);
+  }
+}
+.shadow-emerald-600\/30 {
+  --tw-shadow-color: color-mix(in srgb, oklch(59.6% 0.145 163.225) 30%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-emerald-600) 30%, transparent) var(--tw-shadow-alpha), transparent);
+  }
+}
+.shadow-slate-200\/50 {
+  --tw-shadow-color: color-mix(in srgb, oklch(92.9% 0.013 255.508) 50%, transparent);
+  @supports (color: color-mix(in lab, red, red)) {
+    --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-slate-200) 50%, transparent) var(--tw-shadow-alpha), transparent);
+  }
+}
+.blur-2xl {
+  --tw-blur: blur(var(--blur-2xl));
+  filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+}
+.blur-3xl {
+  --tw-blur: blur(var(--blur-3xl));
+  filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+}
+.backdrop-blur-md {
+  --tw-backdrop-blur: blur(var(--blur-md));
+  -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+}
+.backdrop-blur-sm {
+  --tw-backdrop-blur: blur(var(--blur-sm));
+  -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+}
+.backdrop-blur-xl {
+  --tw-backdrop-blur: blur(var(--blur-xl));
+  -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+}
+.transition-all {
+  transition-property: all;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+}
+.transition-colors {
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+}
+.transition-transform {
+  transition-property: transform, translate, scale, rotate;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+}
+.duration-200 {
+  --tw-duration: 200ms;
+  transition-duration: 200ms;
+}
+.duration-300 {
+  --tw-duration: 300ms;
+  transition-duration: 300ms;
+}
+.duration-500 {
+  --tw-duration: 500ms;
+  transition-duration: 500ms;
+}
+.outline-none {
+  --tw-outline-style: none;
+  outline-style: none;
+}
+.group-hover\:scale-105 {
+  &:is(:where(.group):hover *) {
+    @media (hover: hover) {
+      --tw-scale-x: 105%;
+      --tw-scale-y: 105%;
+      --tw-scale-z: 105%;
+      scale: var(--tw-scale-x) var(--tw-scale-y);
+    }
+  }
+}
+.group-hover\:scale-110 {
+  &:is(:where(.group):hover *) {
+    @media (hover: hover) {
+      --tw-scale-x: 110%;
+      --tw-scale-y: 110%;
+      --tw-scale-z: 110%;
+      scale: var(--tw-scale-x) var(--tw-scale-y);
+    }
+  }
+}
+.group-hover\:bg-accent {
+  &:is(:where(.group):hover *) {
+    @media (hover: hover) {
+      background-color: var(--color-accent);
+    }
+  }
+}
+.group-hover\:bg-amber-600 {
+  &:is(:where(.group):hover *) {
+    @media (hover: hover) {
+      background-color: var(--color-amber-600);
+    }
+  }
+}
+.group-hover\:bg-blue-600 {
+  &:is(:where(.group):hover *) {
+    @media (hover: hover) {
+      background-color: var(--color-blue-600);
+    }
+  }
+}
+.group-hover\:bg-indigo-600 {
+  &:is(:where(.group):hover *) {
+    @media (hover: hover) {
+      background-color: var(--color-indigo-600);
+    }
+  }
+}
+.group-hover\:bg-rose-600 {
+  &:is(:where(.group):hover *) {
+    @media (hover: hover) {
+      background-color: var(--color-rose-600);
+    }
+  }
+}
+.group-hover\:bg-teal-600 {
+  &:is(:where(.group):hover *) {
+    @media (hover: hover) {
+      background-color: var(--color-teal-600);
+    }
+  }
+}
+.group-hover\:text-white {
+  &:is(:where(.group):hover *) {
+    @media (hover: hover) {
+      color: var(--color-white);
+    }
+  }
+}
+.selection\:bg-accent {
+  & *::selection {
+    background-color: var(--color-accent);
+  }
+  &::selection {
+    background-color: var(--color-accent);
+  }
+}
+.selection\:text-white {
+  & *::selection {
+    color: var(--color-white);
+  }
+  &::selection {
+    color: var(--color-white);
+  }
+}
+.hover\:-translate-y-0\.5 {
+  &:hover {
+    @media (hover: hover) {
+      --tw-translate-y: calc(var(--spacing) * -0.5);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
+}
+.hover\:-translate-y-1\.5 {
+  &:hover {
+    @media (hover: hover) {
+      --tw-translate-y: calc(var(--spacing) * -1.5);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
+}
+.hover\:scale-105 {
+  &:hover {
+    @media (hover: hover) {
+      --tw-scale-x: 105%;
+      --tw-scale-y: 105%;
+      --tw-scale-z: 105%;
+      scale: var(--tw-scale-x) var(--tw-scale-y);
+    }
+  }
+}
+.hover\:border-emerald-500\/30 {
+  &:hover {
+    @media (hover: hover) {
+      border-color: color-mix(in srgb, oklch(69.6% 0.17 162.48) 30%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        border-color: color-mix(in oklab, var(--color-emerald-500) 30%, transparent);
+      }
+    }
+  }
+}
+.hover\:border-emerald-500\/50 {
+  &:hover {
+    @media (hover: hover) {
+      border-color: color-mix(in srgb, oklch(69.6% 0.17 162.48) 50%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        border-color: color-mix(in oklab, var(--color-emerald-500) 50%, transparent);
+      }
+    }
+  }
+}
+.hover\:bg-accent {
+  &:hover {
+    @media (hover: hover) {
+      background-color: var(--color-accent);
+    }
+  }
+}
+.hover\:bg-accent-hover {
+  &:hover {
+    @media (hover: hover) {
+      background-color: var(--color-accent-hover);
+    }
+  }
+}
+.hover\:bg-slate-50 {
+  &:hover {
+    @media (hover: hover) {
+      background-color: var(--color-slate-50);
+    }
+  }
+}
+.hover\:bg-slate-100 {
+  &:hover {
+    @media (hover: hover) {
+      background-color: var(--color-slate-100);
+    }
+  }
+}
+.hover\:bg-white {
+  &:hover {
+    @media (hover: hover) {
+      background-color: var(--color-white);
+    }
+  }
+}
+.hover\:bg-white\/20 {
+  &:hover {
+    @media (hover: hover) {
+      background-color: color-mix(in srgb, #fff 20%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        background-color: color-mix(in oklab, var(--color-white) 20%, transparent);
+      }
+    }
+  }
+}
+.hover\:from-emerald-600 {
+  &:hover {
+    @media (hover: hover) {
+      --tw-gradient-from: var(--color-emerald-600);
+      --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+    }
+  }
+}
+.hover\:to-teal-700 {
+  &:hover {
+    @media (hover: hover) {
+      --tw-gradient-to: var(--color-teal-700);
+      --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+    }
+  }
+}
+.hover\:text-accent {
+  &:hover {
+    @media (hover: hover) {
+      color: var(--color-accent);
+    }
+  }
+}
+.hover\:text-primary {
+  &:hover {
+    @media (hover: hover) {
+      color: var(--color-primary);
+    }
+  }
+}
+.hover\:text-white {
+  &:hover {
+    @media (hover: hover) {
+      color: var(--color-white);
+    }
+  }
+}
+.hover\:shadow-lg {
+  &:hover {
+    @media (hover: hover) {
+      --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    }
+  }
+}
+.hover\:shadow-xl {
+  &:hover {
+    @media (hover: hover) {
+      --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    }
+  }
+}
+.hover\:shadow-emerald-500\/30 {
+  &:hover {
+    @media (hover: hover) {
+      --tw-shadow-color: color-mix(in srgb, oklch(69.6% 0.17 162.48) 30%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        --tw-shadow-color: color-mix(in oklab, color-mix(in oklab, var(--color-emerald-500) 30%, transparent) var(--tw-shadow-alpha), transparent);
+      }
+    }
+  }
+}
+.focus\:border-accent {
+  &:focus {
+    border-color: var(--color-accent);
+  }
+}
+.focus\:ring-2 {
+  &:focus {
+    --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+}
+.focus\:ring-accent\/20 {
+  &:focus {
+    --tw-ring-color: color-mix(in srgb, #10b981 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-ring-color: color-mix(in oklab, var(--color-accent) 20%, transparent);
+    }
+  }
+}
+.sm\:mt-0 {
+  @media (width >= 40rem) {
+    margin-top: calc(var(--spacing) * 0);
+  }
+}
+.sm\:w-auto {
+  @media (width >= 40rem) {
+    width: auto;
+  }
+}
+.sm\:grid-cols-2 {
+  @media (width >= 40rem) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.sm\:flex-row {
+  @media (width >= 40rem) {
+    flex-direction: row;
+  }
+}
+.sm\:p-8 {
+  @media (width >= 40rem) {
+    padding: calc(var(--spacing) * 8);
+  }
+}
+.sm\:p-10 {
+  @media (width >= 40rem) {
+    padding: calc(var(--spacing) * 10);
+  }
+}
+.sm\:px-6 {
+  @media (width >= 40rem) {
+    padding-inline: calc(var(--spacing) * 6);
+  }
+}
+.sm\:text-3xl {
+  @media (width >= 40rem) {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
+}
+.sm\:text-4xl {
+  @media (width >= 40rem) {
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
+  }
+}
+.sm\:text-5xl {
+  @media (width >= 40rem) {
+    font-size: var(--text-5xl);
+    line-height: var(--tw-leading, var(--text-5xl--line-height));
+  }
+}
+.sm\:text-sm {
+  @media (width >= 40rem) {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
+}
+.sm\:text-xl {
+  @media (width >= 40rem) {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
+}
+.md\:grid-cols-2 {
+  @media (width >= 48rem) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.md\:grid-cols-3 {
+  @media (width >= 48rem) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.lg\:col-span-5 {
+  @media (width >= 64rem) {
+    grid-column: span 5 / span 5;
+  }
+}
+.lg\:col-span-7 {
+  @media (width >= 64rem) {
+    grid-column: span 7 / span 7;
+  }
+}
+.lg\:mx-0 {
+  @media (width >= 64rem) {
+    margin-inline: calc(var(--spacing) * 0);
+  }
+}
+.lg\:flex {
+  @media (width >= 64rem) {
+    display: flex;
+  }
+}
+.lg\:hidden {
+  @media (width >= 64rem) {
+    display: none;
+  }
+}
+.lg\:grid-cols-2 {
+  @media (width >= 64rem) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.lg\:grid-cols-3 {
+  @media (width >= 64rem) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.lg\:grid-cols-4 {
+  @media (width >= 64rem) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+.lg\:grid-cols-12 {
+  @media (width >= 64rem) {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+}
+.lg\:justify-start {
+  @media (width >= 64rem) {
+    justify-content: flex-start;
+  }
+}
+.lg\:px-8 {
+  @media (width >= 64rem) {
+    padding-inline: calc(var(--spacing) * 8);
+  }
+}
+.lg\:pt-40 {
+  @media (width >= 64rem) {
+    padding-top: calc(var(--spacing) * 40);
+  }
+}
+.lg\:pb-32 {
+  @media (width >= 64rem) {
+    padding-bottom: calc(var(--spacing) * 32);
+  }
+}
+.lg\:text-left {
+  @media (width >= 64rem) {
+    text-align: left;
+  }
+}
+.lg\:text-6xl {
+  @media (width >= 64rem) {
+    font-size: var(--text-6xl);
+    line-height: var(--tw-leading, var(--text-6xl--line-height));
+  }
+}
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-scale-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-space-y-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-gradient-position {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-from {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-via {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-to {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-stops {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-via-stops {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-from-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 0%;
+}
+@property --tw-gradient-via-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 50%;
+}
+@property --tw-gradient-to-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-tracking {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-inset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-ring-inset {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-offset-width {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+@property --tw-ring-offset-color {
+  syntax: "*";
+  inherits: false;
+  initial-value: #fff;
+}
+@property --tw-ring-offset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-blur {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-brightness {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-contrast {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-grayscale {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-hue-rotate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-invert {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-opacity {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-saturate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-sepia {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-drop-shadow-size {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-blur {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-brightness {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-contrast {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-grayscale {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-hue-rotate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-invert {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-opacity {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-saturate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-sepia {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
+      --tw-scale-x: 1;
+      --tw-scale-y: 1;
+      --tw-scale-z: 1;
+      --tw-rotate-x: initial;
+      --tw-rotate-y: initial;
+      --tw-rotate-z: initial;
+      --tw-skew-x: initial;
+      --tw-skew-y: initial;
+      --tw-space-y-reverse: 0;
+      --tw-border-style: solid;
+      --tw-gradient-position: initial;
+      --tw-gradient-from: #0000;
+      --tw-gradient-via: #0000;
+      --tw-gradient-to: #0000;
+      --tw-gradient-stops: initial;
+      --tw-gradient-via-stops: initial;
+      --tw-gradient-from-position: 0%;
+      --tw-gradient-via-position: 50%;
+      --tw-gradient-to-position: 100%;
+      --tw-leading: initial;
+      --tw-font-weight: initial;
+      --tw-tracking: initial;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-color: initial;
+      --tw-shadow-alpha: 100%;
+      --tw-inset-shadow: 0 0 #0000;
+      --tw-inset-shadow-color: initial;
+      --tw-inset-shadow-alpha: 100%;
+      --tw-ring-color: initial;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-inset-ring-color: initial;
+      --tw-inset-ring-shadow: 0 0 #0000;
+      --tw-ring-inset: initial;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-blur: initial;
+      --tw-brightness: initial;
+      --tw-contrast: initial;
+      --tw-grayscale: initial;
+      --tw-hue-rotate: initial;
+      --tw-invert: initial;
+      --tw-opacity: initial;
+      --tw-saturate: initial;
+      --tw-sepia: initial;
+      --tw-drop-shadow: initial;
+      --tw-drop-shadow-color: initial;
+      --tw-drop-shadow-alpha: 100%;
+      --tw-drop-shadow-size: initial;
+      --tw-backdrop-blur: initial;
+      --tw-backdrop-brightness: initial;
+      --tw-backdrop-contrast: initial;
+      --tw-backdrop-grayscale: initial;
+      --tw-backdrop-hue-rotate: initial;
+      --tw-backdrop-invert: initial;
+      --tw-backdrop-opacity: initial;
+      --tw-backdrop-saturate: initial;
+      --tw-backdrop-sepia: initial;
+      --tw-duration: initial;
+    }
+  }
+}
+
+/* Custom base styles */
+html { scroll-behavior: smooth; }
+body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+img { max-width: 100%; }
+button, input, select, textarea { font: inherit; }
+/* Keep the original custom gradient colors from the Tailwind config */
+.bg-gradient-to-b.from-slate-900.via-primary.to-secondary-blue { background-image: linear-gradient(to bottom, rgb(15 23 42), #0f172a, #1e3a8a); }
+.bg-gradient-to-br.from-primary.to-secondary-blue { background-image: linear-gradient(to bottom right, #0f172a, #1e3a8a); }
+</style></head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-accent selection:text-white">
+<!-- Header & Navigation -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100 transition-all duration-300">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20">
+<!-- Logo -->
+<a class="flex items-center gap-3 group" href="#">
+<div class="w-11 h-11 rounded-xl bg-gradient-to-br from-primary to-secondary-blue flex items-center justify-center text-white shadow-lg shadow-blue-900/20 group-hover:scale-105 transition-transform">
+<i class="fa-solid fa-graduation-cap text-xl"></i>
+</div>
+<div>
+<span class="text-xl font-bold tracking-tight text-primary block leading-tight">PKBM <span class="text-accent">LAM ALIF</span></span>
+<span class="text-xs text-slate-500 font-medium tracking-wider uppercase">Pendidikan Kesetaraan Resmi</span>
+</div>
+</a>
+<!-- Desktop Navigation Menu -->
+<nav class="hidden lg:flex items-center gap-8 font-medium text-slate-600">
+<a class="hover:text-accent transition-colors" href="#beranda">Beranda</a>
+<a class="hover:text-accent transition-colors" href="#tentang">Profil</a>
+<a class="hover:text-accent transition-colors" href="#program">Program</a>
+<a class="hover:text-accent transition-colors" href="#keunggulan">Keunggulan</a>
+<a class="hover:text-accent transition-colors" href="#alur">Alur</a>
+<a class="hover:text-accent transition-colors" href="#faq">FAQ</a>
+<a class="hover:text-accent transition-colors" href="#kontak">Kontak</a>
+</nav>
+<!-- CTA Button -->
+<div class="hidden lg:flex items-center gap-4">
+<a class="flex items-center gap-2 text-slate-600 hover:text-accent font-medium text-sm transition-colors" href="https://wa.me/6281234567890?text=Halo%20Admin%2C%20saya%20ingin%20berkonsultasi%20mengenai%20pendaftaran%20PKBM" target="_blank">
+<i class="fa-brands fa-whatsapp text-lg text-emerald-500"></i>
+<span>Konsultasi</span>
+</a>
+<a class="bg-accent hover:bg-accent-hover text-white px-5 py-2.5 rounded-xl font-semibold shadow-md shadow-emerald-500/20 hover:shadow-lg hover:shadow-emerald-500/30 transition-all transform hover:-translate-y-0.5" href="#pendaftaran">
+                        Daftar Sekarang
+                    </a>
+</div>
+<!-- Mobile Menu Button -->
+<button aria-label="Toggle Mobile Menu" class="lg:hidden p-2.5 rounded-xl text-slate-600 hover:text-primary hover:bg-slate-100 transition-colors" id="mobile-menu-btn">
+<i class="fa-solid fa-bars text-xl"></i>
+</button>
+</div>
+</div>
+<!-- Mobile Menu Dropdown -->
+<div class="hidden lg:hidden bg-white border-b border-slate-100 px-6 pt-4 pb-6 space-y-3 shadow-xl" id="mobile-menu">
+<a class="block py-2 text-slate-600 hover:text-accent font-medium mobile-link" href="#beranda">Beranda</a>
+<a class="block py-2 text-slate-600 hover:text-accent font-medium mobile-link" href="#tentang">Profil</a>
+<a class="block py-2 text-slate-600 hover:text-accent font-medium mobile-link" href="#program">Program</a>
+<a class="block py-2 text-slate-600 hover:text-accent font-medium mobile-link" href="#keunggulan">Keunggulan</a>
+<a class="block py-2 text-slate-600 hover:text-accent font-medium mobile-link" href="#alur">Alur</a>
+<a class="block py-2 text-slate-600 hover:text-accent font-medium mobile-link" href="#faq">FAQ</a>
+<a class="block py-2 text-slate-600 hover:text-accent font-medium mobile-link" href="#kontak">Kontak</a>
+<div class="pt-4 border-t border-slate-100 flex flex-col gap-3">
+<a class="flex items-center justify-center gap-2 py-3 bg-emerald-50 text-emerald-600 rounded-xl font-semibold" href="https://wa.me/6281234567890?text=Halo%20Admin%2C%20saya%20ingin%20berkonsultasi" target="_blank">
+<i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Konsultasi
+                </a>
+<a class="block text-center bg-accent text-white py-3 rounded-xl font-semibold mobile-link shadow-md" href="#pendaftaran">
+                    Daftar Sekarang
+                </a>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 bg-gradient-to-b from-slate-900 via-primary to-secondary-blue text-white overflow-hidden" id="beranda">
+<!-- Background Decorative Glows -->
+<div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/15 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-20 -right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Hero Left Content -->
+<div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 text-xs sm:text-sm font-semibold tracking-wide">
+<i class="fa-solid fa-award"></i> Resmi, Legal &amp; Diakui Negara
+                    </div>
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        Sekolah Kesetaraan Resmi &amp; <span class="text-accent underline decoration-emerald-500/40 decoration-wavy">Terakreditasi</span>
+</h1>
+<p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
+                        Solusi tuntas pendidikan formal terakreditasi A untuk Anda yang sibuk bekerja, putus sekolah, atau ingin melanjutkan kuliah &amp; karier tanpa batasan usia.
+                    </p>
+<div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+<a class="w-full sm:w-auto bg-accent hover:bg-accent-hover text-white text-center px-8 py-4 rounded-xl font-bold shadow-lg shadow-emerald-600/30 transition-all transform hover:-translate-y-0.5" href="#pendaftaran">
+                            Daftar Online Sekarang <i class="fa-solid fa-arrow-right ml-2"></i>
+</a>
+<a class="w-full sm:w-auto bg-white/10 hover:bg-white/20 border border-white/20 text-white text-center px-8 py-4 rounded-xl font-semibold backdrop-blur-sm transition-all flex items-center justify-center gap-2" href="https://wa.me/6281312556871?text=Halo%20Admin%2C%20saya%20ingin%20tanya%20program%20PKBM" target="_blank">
+<i class="fa-brands fa-whatsapp text-emerald-400 text-xl"></i> Tanya Admin via WA
+                        </a>
+</div>
+<!-- Trust Badges inside Hero -->
+<div class="pt-8 border-t border-slate-800 grid grid-cols-3 gap-4 text-center lg:text-left">
+<div>
+<p class="text-2xl sm:text-3xl font-extrabold text-accent">A</p>
+<p class="text-xs sm:text-sm text-slate-400 mt-1">Akreditasi BAN-PDM</p>
+</div>
+<div>
+<p class="text-2xl sm:text-3xl font-extrabold text-white">3.500+</p>
+<p class="text-xs sm:text-sm text-slate-400 mt-1">Alumni Sukses</p>
+</div>
+<div>
+<p class="text-2xl sm:text-3xl font-extrabold text-accent">100%</p>
+<p class="text-xs sm:text-sm text-slate-400 mt-1">Legal &amp; Diakui</p>
+</div>
+</div>
+</div>
+<!-- Hero Right Card / Image Showcase -->
+<div class="lg:col-span-5">
+<div class="bg-white/10 backdrop-blur-xl border border-white/15 p-6 sm:p-8 rounded-3xl shadow-2xl relative">
+<div class="absolute -top-4 -right-4 bg-accent text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-md">
+                            Terdaftar di Dapodik
+                        </div>
+<h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+<i class="fa-solid fa-clipboard-check text-emerald-400"></i> Pendaftaran Tahun Ajaran 2026/2027
+                        </h3>
+<p class="text-slate-300 text-sm mb-6">
+                            Amankan kursi Anda di program kesetaraan resmi. Proses cepat, bimbingan fleksibel, dan ijazah setara sekolah formal.
+                        </p>
+<div class="space-y-4">
+<div class="flex items-center gap-3.5 bg-white/5 p-3.5 rounded-xl border border-white/10">
+<div class="w-10 h-10 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400 flex-shrink-0">
+<span class="font-bold">A</span>
+</div>
+<div>
+<h4 class="font-semibold text-white text-sm">Paket A (Setara SD)</h4>
+<p class="text-xs text-slate-300">Kelas 1-6 SD Sederajat</p>
+</div>
+</div>
+<div class="flex items-center gap-3.5 bg-white/5 p-3.5 rounded-xl border border-white/10">
+<div class="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400 flex-shrink-0">
+<span class="font-bold">B</span>
+</div>
+<div>
+<h4 class="font-semibold text-white text-sm">Paket B (Setara SMP)</h4>
+<p class="text-xs text-slate-300">Kelas 7-9 SMP Sederajat</p>
+</div>
+</div>
+<div class="flex items-center gap-3.5 bg-white/5 p-3.5 rounded-xl border border-white/10">
+<div class="w-10 h-10 rounded-lg bg-amber-500/20 flex items-center justify-center text-amber-400 flex-shrink-0">
+<span class="font-bold">C</span>
+</div>
+<div>
+<h4 class="font-semibold text-white text-sm">Paket C (Setara SMA/SMK)</h4>
+<p class="text-xs text-slate-300">IPA &amp; IPS (Kuliah / Kerja)</p>
+</div>
+</div>
+</div>
+<div class="mt-6">
+<a class="w-full bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-semibold py-3 rounded-xl transition-all shadow-md block text-center" href="#program">
+                                Pelajari Detail Program
+                            </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Tentang Kami -->
+<section class="py-20 bg-white" id="tentang">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<!-- Left Visual / Image -->
+<div class="relative">
+<div class="absolute -inset-4 bg-gradient-to-r from-accent/20 to-blue-500/20 rounded-3xl blur-2xl pointer-events-none"></div>
+<div class="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-100 bg-slate-900 aspect-[4/3]">
+<img alt="Kegiatan Belajar Mengajar PKBM" class="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/800x600/0f172a/ffffff?text=PKBM+lam+Alif'" src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&amp;fit=crop&amp;q=80&amp;w=800"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex items-end p-8">
+<div class="text-white">
+<span class="bg-accent text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Legalitas Resmi</span>
+<h4 class="text-xl font-bold mt-2">NPSN: P9988776 • Terdaftar Resmi Dinas Pendidikan</h4>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Description -->
+<div class="space-y-6">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 text-blue-700 text-xs sm:text-sm font-semibold">
+<i class="fa-solid fa-shield-halved"></i> Tentang PKBM Lam Alif
+                    </div>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-primary tracking-tight">
+                        Mewujudkan Pendidikan Setara yang Berkualitas &amp; Fleksibel
+                    </h2>
+<p class="text-slate-600 leading-relaxed font-light">
+                        PKBM Lam Alif adalah lembaga pendidikan non-formal yang resmi berdiri di bawah naungan Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi serta terdaftar dalam sistem Dapodik dan BAN-PDM. Kami hadir untuk memberikan kesempatan kedua (Second Chance Education) bagi masyarakat yang terkendala waktu, biaya, maupun usia dalam menempuh pendidikan formal.
+                    </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+<div class="flex items-start gap-3 bg-slate-50 p-4 rounded-2xl border border-slate-100">
+<div class="w-10 h-10 rounded-xl bg-accent/10 text-accent flex items-center justify-center flex-shrink-0">
+<i class="fa-solid fa-clock text-lg"></i>
+</div>
+<div>
+<h4 class="font-bold text-primary text-sm">Waktu Fleksibel</h4>
+<p class="text-xs text-slate-500 mt-1">Jadwal belajar disesuaikan untuk pekerja &amp; wiraswasta.</p>
+</div>
+</div>
+<div class="flex items-start gap-3 bg-slate-50 p-4 rounded-2xl border border-slate-100">
+<div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-600 flex items-center justify-center flex-shrink-0">
+<i class="fa-solid fa-wallet text-lg"></i>
+</div>
+<div>
+<h4 class="font-bold text-primary text-sm">Biaya Terjangkau</h4>
+<p class="text-xs text-slate-500 mt-1">Sistem pembayaran ringan &amp; dapat dicicil sesuai kemampuan.</p>
+</div>
+</div>
+</div>
+<div class="pt-4 flex items-center gap-6">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold text-xl">
+<i class="fa-solid fa-check"></i>
+</div>
+<div>
+<p class="font-bold text-primary">Ijazah Terdaftar Nasional</p>
+<p class="text-xs text-slate-500">Legal untuk kuliah &amp; kerja</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pilihan Program Kesetaraan -->
+<section class="py-20 bg-slate-100/70 border-y border-slate-200/60" id="program">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+<span class="px-3.5 py-1.5 rounded-full bg-emerald-50 text-accent text-xs sm:text-sm font-semibold tracking-wide">
+                    Program Unggulan
+                </span>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-primary tracking-tight">
+                    Pilihan Program Kesetaraan
+                </h2>
+<p class="text-slate-600 font-light">
+                    Pilih program sesuai kebutuhan jenjang pendidikan Anda. Seluruh program diakui secara nasional setara dengan sekolah formal.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Paket A -->
+<div class="bg-white rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-200/80 overflow-hidden hover:-translate-y-1.5 transition-all duration-300 flex flex-col">
+<div class="p-8 bg-gradient-to-br from-emerald-500 to-teal-700 text-white relative">
+<span class="absolute top-6 right-6 bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full backdrop-blur-md">Setara SD</span>
+<div class="w-14 h-14 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center text-2xl font-black mb-4 shadow-inner">
+                            A
+                        </div>
+<h3 class="text-2xl font-bold">Paket A</h3>
+<p class="text-emerald-100 text-sm mt-1">Pendidikan Dasar (Kelas 1 - 6)</p>
+</div>
+<div class="p-8 flex-1 flex flex-col justify-between space-y-6">
+<ul class="space-y-3.5 text-sm text-slate-600">
+<li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-emerald-500"></i> Setara Ijazah SD Resmi</li>
+<li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-emerald-500"></i> Dasar baca, tulis, hitung &amp; pengetahuan umum</li>
+<li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-emerald-500"></i> Tutor sabar &amp; berpengalaman</li>
+<li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-emerald-500"></i> Modul belajar lengkap</li>
+</ul>
+<a class="w-full bg-slate-900 hover:bg-accent text-white text-center py-3.5 rounded-xl font-semibold transition-colors block shadow-md" href="#pendaftaran">
+                            Daftar Paket A
+                        </a>
+</div>
+</div>
+<!-- Paket B -->
+<div class="bg-white rounded-3xl shadow-xl shadow-slate-200/50 border-2 border-accent overflow-hidden hover:-translate-y-1.5 transition-all duration-300 flex flex-col relative">
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-white text-[11px] font-bold uppercase tracking-wider px-4 py-1 rounded-full shadow-md">
+                        Paling Banyak Dicari
+                    </div>
+<div class="p-8 bg-gradient-to-br from-primary to-secondary-blue text-white relative">
+<span class="absolute top-6 right-6 bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full backdrop-blur-md">Setara SMP</span>
+<div class="w-14 h-14 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center text-2xl font-black mb-4 shadow-inner">
+                            B
+                        </div>
+<h3 class="text-2xl font-bold">Paket B</h3>
+<p class="text-blue-200 text-sm mt-1">Pendidikan Menengah Pertama</p>
+</div>
+<div class="p-8 flex-1 flex flex-col justify-between space-y-6">
+<ul class="space-y-3.5 text-sm text-slate-600">
+<li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-accent"></i> Setara Ijazah SMP Resmi</li>
+<li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-accent"></i> Persiapan lanjut ke SMA/SMK sederajat</li>
+<li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-accent"></i> Kelas tatap muka &amp; online fleksibel</li>
+<li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-accent"></i> Bimbingan konseling karir &amp; bakat</li>
+</ul>
+<a class="w-full bg-accent hover:bg-accent-hover text-white text-center py-3.5 rounded-xl font-semibold transition-colors block shadow-md shadow-emerald-500/20" href="#pendaftaran">
+                            Daftar Paket B
+                        </a>
+</div>
+</div>
+<!-- Paket C -->
+<div class="bg-white rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-200/80 overflow-hidden hover:-translate-y-1.5 transition-all duration-300 flex flex-col">
+<div class="p-8 bg-gradient-to-br from-blue-700 to-indigo-900 text-white relative">
+<span class="absolute top-6 right-6 bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full backdrop-blur-md">Setara SMA/SMK</span>
+<div class="w-14 h-14 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center text-2xl font-black mb-4 shadow-inner">
+                            C
+                        </div>
+<h3 class="text-2xl font-bold">Paket C</h3>
+<p class="text-indigo-200 text-sm mt-1">Pendidikan Menengah Atas (IPA/IPS)</p>
+</div>
+<div class="p-8 flex-1 flex flex-col justify-between space-y-6">
+<ul class="space-y-3.5 text-sm text-slate-600">
+<li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-blue-600"></i> Setara Ijazah SMA/SMK Resmi</li>
+<li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-blue-600"></i> Jurusan IPA &amp; IPS (Bisa untuk Kuliah di PTN/PTS)</li>
+<li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-blue-600"></i> Cocok untuk syarat melamar kerja &amp; PNS</li>
+<li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-blue-600"></i> Fleksibel untuk pekerja kantoran</li>
+</ul>
+<a class="w-full bg-slate-900 hover:bg-accent text-white text-center py-3.5 rounded-xl font-semibold transition-colors block shadow-md" href="#pendaftaran">
+                            Daftar Paket C
+                        </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Keunggulan Lembaga -->
+<section class="py-20 bg-white" id="keunggulan">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+<span class="px-3.5 py-1.5 rounded-full bg-emerald-50 text-accent text-xs sm:text-sm font-semibold tracking-wide">
+                    Kenapa Memilih Kami?
+                </span>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-primary tracking-tight">
+                    Keunggulan PKBM Lam Alif
+                </h2>
+<p class="text-slate-600 font-light">
+                    Kami berkomitmen memberikan layanan pendidikan terbaik dengan kemudahan akses dan legalitas terjamin.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- 1 -->
+<div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-emerald-500/30 hover:shadow-xl hover:bg-white transition-all group">
+<div class="w-14 h-14 rounded-2xl bg-emerald-500/10 text-accent flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-accent group-hover:text-white transition-all">
+<i class="fa-solid fa-award"></i>
+</div>
+<h3 class="text-xl font-bold text-primary mb-2">Ijazah Resmi Negara</h3>
+<p class="text-slate-600 text-sm font-light leading-relaxed">
+                        Ijazah dikeluarkan resmi oleh Kementerian Pendidikan dan sah digunakan untuk bekerja, melanjutkan kuliah, maupun mendaftar CPNS/TNI/Polri.
+                    </p>
+</div>
+<!-- 2 -->
+<div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-emerald-500/30 hover:shadow-xl hover:bg-white transition-all group">
+<div class="w-14 h-14 rounded-2xl bg-blue-500/10 text-blue-600 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all">
+<i class="fa-solid fa-star"></i>
+</div>
+<h3 class="text-xl font-bold text-primary mb-2">Terakreditasi A</h3>
+<p class="text-slate-600 text-sm font-light leading-relaxed">
+                        Memiliki nilai akreditasi unggul dari Badan Akreditasi Nasional (BAN-PDM) dengan standar pengelolaan mutu pendidikan terbaik.
+                    </p>
+</div>
+<!-- 3 -->
+<div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-emerald-500/30 hover:shadow-xl hover:bg-white transition-all group">
+<div class="w-14 h-14 rounded-2xl bg-indigo-500/10 text-indigo-600 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-indigo-600 group-hover:text-white transition-all">
+<i class="fa-solid fa-user-clock"></i>
+</div>
+<h3 class="text-xl font-bold text-primary mb-2">Bebas Batas Usia</h3>
+<p class="text-slate-600 text-sm font-light leading-relaxed">
+                        Tidak ada batasan usia bagi peserta didik. Terbuka untuk remaja putus sekolah hingga orang dewasa yang ingin mengejar ijazah.
+                    </p>
+</div>
+<!-- 4 -->
+<div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-emerald-500/30 hover:shadow-xl hover:bg-white transition-all group">
+<div class="w-14 h-14 rounded-2xl bg-amber-500/10 text-amber-600 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-amber-600 group-hover:text-white transition-all">
+<i class="fa-solid fa-map-location-dot"></i>
+</div>
+<h3 class="text-xl font-bold text-primary mb-2">Bebas Domisili</h3>
+<p class="text-slate-600 text-sm font-light leading-relaxed">
+                        Menerima peserta didik dari seluruh wilayah Indonesia maupun Tenaga Kerja Indonesia (TKI) di luar negeri dengan sistem belajar jarak jauh/blended learning.
+                    </p>
+</div>
+<!-- 5 -->
+<div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-emerald-500/30 hover:shadow-xl hover:bg-white transition-all group">
+<div class="w-14 h-14 rounded-2xl bg-rose-500/10 text-rose-600 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-rose-600 group-hover:text-white transition-all">
+<i class="fa-solid fa-hand-holding-dollar"></i>
+</div>
+<h3 class="text-xl font-bold text-primary mb-2">Biaya Bisa Dicicil</h3>
+<p class="text-slate-600 text-sm font-light leading-relaxed">
+                        Sistem pembayaran administrasi yang sangat ramah dan dapat diangsur beberapa kali selama masa belajar tanpa bunga tersembunyi.
+                    </p>
+</div>
+<!-- 6 -->
+<div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-emerald-500/30 hover:shadow-xl hover:bg-white transition-all group">
+<div class="w-14 h-14 rounded-2xl bg-teal-500/10 text-teal-600 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-teal-600 group-hover:text-white transition-all">
+<i class="fa-solid fa-chalkboard-user"></i>
+</div>
+<h3 class="text-xl font-bold text-primary mb-2">Tutor Profesional</h3>
+<p class="text-slate-600 text-sm font-light leading-relaxed">
+                        Didampingi oleh tenaga pendidik dan tutor berpengalaman yang sabar, suportif, serta berdedikasi tinggi dalam membimbing siswa hingga lulus.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Alur Pendaftaran 4 Langkah Mudah -->
+<section class="py-20 bg-slate-900 text-white relative overflow-hidden" id="alur">
+<div class="absolute inset-0 opacity-10 bg-[radial-gradient(#10b981_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+<span class="px-3.5 py-1.5 rounded-full bg-emerald-500/20 text-emerald-400 text-xs sm:text-sm font-semibold tracking-wide border border-emerald-500/30">
+                    Proses Cepat &amp; Mudah
+                </span>
+<h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+                    Alur Pendaftaran 4 Langkah Mudah
+                </h2>
+<p class="text-slate-300 font-light">
+                    Mulai perjalanan pendidikan Anda bersama kami melalui tahapan sederhana berikut.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Step 1 -->
+<div class="bg-white/5 border border-white/10 p-8 rounded-3xl relative backdrop-blur-sm hover:border-emerald-500/50 transition-all">
+<div class="absolute -top-4 -left-4 w-12 h-12 rounded-2xl bg-accent text-white flex items-center justify-center font-black text-xl shadow-lg">
+                        01
+                    </div>
+<div class="pt-2">
+<div class="w-12 h-12 rounded-xl bg-accent/20 text-emerald-400 flex items-center justify-center text-xl mb-4">
+<i class="fa-solid fa-comments"></i>
+</div>
+<h3 class="text-xl font-bold mb-2">Konsultasi Awal</h3>
+<p class="text-slate-300 text-sm font-light">
+                            Hubungi admin via WhatsApp atau isi form online untuk konsultasi pilihan paket dan kelengkapan berkas.
+                        </p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="bg-white/5 border border-white/10 p-8 rounded-3xl relative backdrop-blur-sm hover:border-emerald-500/50 transition-all">
+<div class="absolute -top-4 -left-4 w-12 h-12 rounded-2xl bg-accent text-white flex items-center justify-center font-black text-xl shadow-lg">
+                        02
+                    </div>
+<div class="pt-2">
+<div class="w-12 h-12 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-xl mb-4">
+<i class="fa-solid fa-file-pen"></i>
+</div>
+<h3 class="text-xl font-bold mb-2">Pilih &amp; Isi Berkas</h3>
+<p class="text-slate-300 text-sm font-light">
+                            Menyerahkan dokumen seperti KTP, KK, Ijazah terakhir (jika ada), dan pas foto untuk verifikasi Dapodik.
+                        </p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="bg-white/5 border border-white/10 p-8 rounded-3xl relative backdrop-blur-sm hover:border-emerald-500/50 transition-all">
+<div class="absolute -top-4 -left-4 w-12 h-12 rounded-2xl bg-accent text-white flex items-center justify-center font-black text-xl shadow-lg">
+                        03
+                    </div>
+<div class="pt-2">
+<div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-xl mb-4">
+<i class="fa-solid fa-book-open-reader"></i>
+</div>
+<h3 class="text-xl font-bold mb-2">Mulai Proses Belajar</h3>
+<p class="text-slate-300 text-sm font-light">
+                            Bergabung dalam kelas bimbingan tatap muka atau modul online dengan jadwal yang fleksibel sesuai waktu luang Anda.
+                        </p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="bg-white/5 border border-white/10 p-8 rounded-3xl relative backdrop-blur-sm hover:border-emerald-500/50 transition-all">
+<div class="absolute -top-4 -left-4 w-12 h-12 rounded-2xl bg-accent text-white flex items-center justify-center font-black text-xl shadow-lg">
+                        04
+                    </div>
+<div class="pt-2">
+<div class="w-12 h-12 rounded-xl bg-rose-500/20 text-rose-400 flex items-center justify-center text-xl mb-4">
+<i class="fa-solid fa-graduation-cap"></i>
+</div>
+<h3 class="text-xl font-bold mb-2">Ujian &amp; Lulus</h3>
+<p class="text-slate-300 text-sm font-light">
+                            Mengikuti ujian kesetaraan akhir dan menerima ijazah resmi negara yang sah dan siap digunakan.
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Interaktif -->
+<section class="py-20 bg-white" id="faq">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+<span class="px-3.5 py-1.5 rounded-full bg-emerald-50 text-accent text-xs sm:text-sm font-semibold tracking-wide">
+                    Pertanyaan Umum
+                </span>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-primary tracking-tight">
+                    Frequently Asked Questions (FAQ)
+                </h2>
+<p class="text-slate-600 font-light">
+                    Temukan jawaban atas pertanyaan seputar legalitas, sistem belajar, dan pendaftaran PKBM.
+                </p>
+</div>
+<div class="space-y-4" id="faq-container">
+<!-- FAQ 1 -->
+<div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-200">
+<button class="faq-toggle w-full flex items-center justify-between p-6 text-left font-bold text-primary hover:bg-slate-50 transition-colors">
+<span>Apakah Ijazah PKBM sah dan diakui oleh negara?</span>
+<i class="fa-solid fa-chevron-down text-accent transition-transform duration-300"></i>
+</button>
+<div class="faq-content hidden px-6 pb-6 text-slate-600 text-sm font-light leading-relaxed border-t border-slate-100 pt-4">
+                        Ya, sangat sah! Ijazah PKBM (Paket A, B, dan C) dikeluarkan resmi oleh Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi Republik Indonesia. Ijazah ini memiliki kedudukan hukum yang setara dengan sekolah formal (SD, SMP, SMA/SMK) dan terdaftar dalam sistem Dapodik nasional.
+                    </div>
+</div>
+<!-- FAQ 2 -->
+<div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-200">
+<button class="faq-toggle w-full flex items-center justify-between p-6 text-left font-bold text-primary hover:bg-slate-50 transition-colors">
+<span>Apakah lulusan Paket C bisa digunakan untuk kuliah di PTN atau melamar kerja/CPNS?</span>
+<i class="fa-solid fa-chevron-down text-accent transition-transform duration-300"></i>
+</button>
+<div class="faq-content hidden px-6 pb-6 text-slate-600 text-sm font-light leading-relaxed border-t border-slate-100 pt-4">
+                        Sangat bisa. Banyak alumni Paket C kami yang telah diterima di Perguruan Tinggi Negeri (PTN) melalui jalur SNBP, SNBT, maupun jalur mandiri. Ijazah Paket C juga legal dan sah untuk melamar pekerjaan di instansi swasta maupun mendaftar CPNS, TNI, dan Polri.
+                    </div>
+</div>
+<!-- FAQ 3 -->
+<div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-200">
+<button class="faq-toggle w-full flex items-center justify-between p-6 text-left font-bold text-primary hover:bg-slate-50 transition-colors">
+<span>Bagaimana sistem belajar bagi orang yang sudah bekerja?</span>
+<i class="fa-solid fa-chevron-down text-accent transition-transform duration-300"></i>
+</button>
+<div class="faq-content hidden px-6 pb-6 text-slate-600 text-sm font-light leading-relaxed border-t border-slate-100 pt-4">
+                        Kami menerapkan sistem *Blended Learning* (kombinasi tatap muka fleksibel dan pembelajaran mandiri/online). Jadwal belajar dirancang khusus di akhir pekan (Sabtu/Minggu) atau melalui modul online sehingga tidak mengganggu jam kerja atau aktivitas harian Anda.
+                    </div>
+</div>
+<!-- FAQ 4 -->
+<div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-200">
+<button class="faq-toggle w-full flex items-center justify-between p-6 text-left font-bold text-primary hover:bg-slate-50 transition-colors">
+<span>Berapa lama waktu tempuh pendidikan untuk setiap paket?</span>
+<i class="fa-solid fa-chevron-down text-accent transition-transform duration-300"></i>
+</button>
+<div class="faq-content hidden px-6 pb-6 text-slate-600 text-sm font-light leading-relaxed border-t border-slate-100 pt-4">
+                        Secara normal, waktu tempuh setara dengan sekolah formal (misal Paket C adalah 3 tahun atau setara kelas 10, 11, 12). Namun, bagi peserta yang memiliki rapor kelas sebelumnya atau mengikuti program percepatan, waktu dapat disesuaikan berdasarkan ketentuan penilik dan Dapodik.
+                    </div>
+</div>
+<!-- FAQ 5 -->
+<div class="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-200">
+<button class="faq-toggle w-full flex items-center justify-between p-6 text-left font-bold text-primary hover:bg-slate-50 transition-colors">
+<span>Apa saja syarat dokumen yang harus disiapkan untuk mendaftar?</span>
+<i class="fa-solid fa-chevron-down text-accent transition-transform duration-300"></i>
+</button>
+<div class="faq-content hidden px-6 pb-6 text-slate-600 text-sm font-light leading-relaxed border-t border-slate-100 pt-4">
+                        Syarat umumnya sangat mudah:
+                        <ul class="list-disc pl-5 mt-2 space-y-1">
+<li>Fotokopi / Scan KTP atau Akta Kelahiran</li>
+<li>Fotokopi / Scan Kartu Keluarga (KK)</li>
+<li>Ijazah / Rapor kelas terakhir (jika ada, jika putus sekolah lama dapat dikonsultasikan)</li>
+<li>Pas foto berwarna ukuran 3x4 (4 lembar)</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Formulir Kontak & Pendaftaran Online -->
+<section class="py-20 bg-slate-100/70 border-t border-slate-200/60 relative" id="pendaftaran">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Info Kolom Kiri -->
+<div class="lg:col-span-5 space-y-6">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 text-accent text-xs sm:text-sm font-semibold">
+<i class="fa-solid fa-paper-plane"></i> Pendaftaran Online
+                    </div>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-primary tracking-tight">
+                        Amankan Kursi Belajar Anda Sekarang
+                    </h2>
+<p class="text-slate-600 font-light leading-relaxed">
+                        Isi formulir pendaftaran singkat di samping atau hubungi tim admin kami untuk mendapatkan respon cepat dan konsultasi langsung mengenai program kesetaraan.
+                    </p>
+<div class="space-y-4 pt-4">
+<div class="flex items-center gap-4 bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+<div class="w-12 h-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center text-xl flex-shrink-0">
+<i class="fa-solid fa-location-dot"></i>
+</div>
+<div>
+<h4 class="font-bold text-primary text-sm">Alamat Utama</h4>
+<p class="text-xs text-slate-500 mt-0.5">Ciawitali Lembur No.77, Mandalasari, Kec. Cikalong Wetan, Kabupaten Bandung Barat, Jawa Barat 40556 
+</p>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+<div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-600 flex items-center justify-center text-xl flex-shrink-0">
+<i class="fa-solid fa-phone"></i>
+</div>
+<div>
+<h4 class="font-bold text-primary text-sm">Telepon / WhatsApp</h4>
+<p class="text-xs text-slate-500 mt-0.5">+62 813-1255-6781 (Layanan 24 Jam)</p>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+<div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center text-xl flex-shrink-0">
+<i class="fa-solid fa-envelope"></i>
+</div>
+<div>
+<h4 class="font-bold text-primary text-sm">Email Resmi</h4>
+<p class="text-xs text-slate-500 mt-0.5">pkbmlamalif@gmail.com</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Form Pendaftaran -->
+<div class="lg:col-span-7">
+<div class="bg-white p-8 sm:p-10 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-200">
+<h3 class="text-2xl font-bold text-primary mb-2">Formulir Pendaftaran &amp; Konsultasi</h3>
+<p class="text-slate-500 text-sm mb-8 font-light">Lengkapi data diri Anda di bawah ini dan admin kami akan segera menghubungi Anda.</p>
+<form class="space-y-6" id="registration-form">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-semibold text-slate-700 mb-2">Nama Lengkap *</label>
+<input class="w-full px-4 py-3.5 rounded-xl border border-slate-200 focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none transition-all text-sm" id="nama" placeholder="Contoh: Budi Santoso" required="" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-semibold text-slate-700 mb-2">Nomor WhatsApp / HP *</label>
+<input class="w-full px-4 py-3.5 rounded-xl border border-slate-200 focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none transition-all text-sm" id="whatsapp" placeholder="Contoh: 081234567890" required="" type="tel"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-semibold text-slate-700 mb-2">Pilih Program Kesetaraan *</label>
+<select class="w-full px-4 py-3.5 rounded-xl border border-slate-200 focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none transition-all text-sm bg-white" id="program-pilihan" required="">
+<option value="">-- Pilih Program --</option>
+<option value="Paket A">Paket A (Setara SD)</option>
+<option value="Paket B">Paket B (Setara SMP)</option>
+<option value="Paket C">Paket C (Setara SMA/SMK)</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-semibold text-slate-700 mb-2">Domisili / Kota *</label>
+<input class="w-full px-4 py-3.5 rounded-xl border border-slate-200 focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none transition-all text-sm" id="domisili" placeholder="Contoh: Kota Bandung" required="" type="text"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-semibold text-slate-700 mb-2">Catatan / Pertanyaan Tambahan</label>
+<textarea class="w-full px-4 py-3.5 rounded-xl border border-slate-200 focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none transition-all text-sm" id="catatan" placeholder="Tuliskan jika ada kendala atau pertanyaan khusus..." rows="3"></textarea>
+</div>
+<button class="w-full bg-accent hover:bg-accent-hover text-white py-4 rounded-xl font-bold shadow-lg shadow-emerald-500/20 hover:shadow-xl hover:shadow-emerald-500/30 transition-all transform hover:-translate-y-0.5" type="submit">
+                                Kirim Pendaftaran Sekarang <i class="fa-solid fa-paper-plane ml-2"></i>
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer Profesional -->
+<footer class="bg-primary text-white pt-16 pb-12 border-t border-slate-800" id="kontak">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+<!-- Col 1: Brand -->
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-accent flex items-center justify-center text-white shadow-lg">
+<i class="fa-solid fa-graduation-cap text-lg"></i>
+</div>
+<span class="text-lg font-bold tracking-tight block">PKBM <span class="text-accent">LAM ALIF</span></span>
+</div>
+<p class="text-slate-400 text-sm font-light leading-relaxed">
+                        Lembaga Pendidikan Kesetaraan resmi terakreditasi A yang mendedikasikan diri untuk mencerdaskan kehidupan bangsa tanpa batas usia dan ruang.
+                    </p>
+<div class="flex items-center gap-3 pt-2">
+<a class="w-10 h-10 rounded-xl bg-white/5 hover:bg-accent flex items-center justify-center text-slate-300 hover:text-white transition-colors" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+<a class="w-10 h-10 rounded-xl bg-white/5 hover:bg-accent flex items-center justify-center text-slate-300 hover:text-white transition-colors" href="#"><i class="fa-brands fa-instagram"></i></a>
+<a class="w-10 h-10 rounded-xl bg-white/5 hover:bg-accent flex items-center justify-center text-slate-300 hover:text-white transition-colors" href="#"><i class="fa-brands fa-youtube"></i></a>
+<a class="w-10 h-10 rounded-xl bg-white/5 hover:bg-accent flex items-center justify-center text-slate-300 hover:text-white transition-colors" href="#"><i class="fa-brands fa-whatsapp"></i></a>
+</div>
+</div>
+<!-- Col 2: Quick Links -->
+<div>
+<h4 class="text-base font-bold mb-4 border-b border-slate-800 pb-2">Navigasi Utama</h4>
+<ul class="space-y-2.5 text-sm text-slate-400">
+<li><a class="hover:text-accent transition-colors" href="#beranda">Beranda</a></li>
+<li><a class="hover:text-accent transition-colors" href="#tentang">Tentang Kami &amp; Profil</a></li>
+<li><a class="hover:text-accent transition-colors" href="#program">Program Kesetaraan</a></li>
+<li><a class="hover:text-accent transition-colors" href="#keunggulan">Keunggulan Lembaga</a></li>
+<li><a class="hover:text-accent transition-colors" href="#alur">Alur Pendaftaran</a></li>
+</ul>
+</div>
+<!-- Col 3: Programs -->
+<div>
+<h4 class="text-base font-bold mb-4 border-b border-slate-800 pb-2">Program Belajar</h4>
+<ul class="space-y-2.5 text-sm text-slate-400">
+<li><a class="hover:text-accent transition-colors" href="#program">Paket A (Setara SD)</a></li>
+<li><a class="hover:text-accent transition-colors" href="#program">Paket B (Setara SMP)</a></li>
+<li><a class="hover:text-accent transition-colors" href="#program">Paket C (Setara SMA/SMK IPA)</a></li>
+<li><a class="hover:text-accent transition-colors" href="#program">Paket C (Setara SMA/SMK IPS)</a></li>
+<li><a class="hover:text-accent transition-colors" href="#pendaftaran">Konsultasi Beasiswa / Cicilan</a></li>
+</ul>
+</div>
+<!-- Col 4: Operational Hours -->
+<div>
+<h4 class="text-base font-bold mb-4 border-b border-slate-800 pb-2">Jam Operasional</h4>
+<ul class="space-y-3 text-sm text-slate-400">
+<li class="flex items-start gap-3">
+<i class="fa-regular fa-clock text-accent mt-1"></i>
+<div>
+<p class="font-medium text-white">Senin - Jumat</p>
+<p class="text-xs">08:00 - 16:00 WIB</p>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<i class="fa-regular fa-calendar-days text-accent mt-1"></i>
+<div>
+<p class="font-medium text-white">Sabtu - Minggu (Kelas Khusus)</p>
+<p class="text-xs">09:00 - 15:00 WIB</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
+<p>© 2026 PKBM Lam Alif. Hak Cipta Dilindungi Undang-Undang.</p>
+<div class="flex gap-6 mt-4 sm:mt-0">
+<a class="hover:text-accent transition-colors" href="#">Kebijakan Privasi</a>
+<a class="hover:text-accent transition-colors" href="#">Syarat &amp; Ketentuan</a>
+<a class="hover:text-accent transition-colors" href="#">Dapodik &amp; Akreditasi</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Success Modal Popup -->
+<div class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4" id="success-modal">
+<div class="bg-white rounded-3xl max-w-md w-full p-8 text-center shadow-2xl transform transition-all scale-95 opacity-0" id="modal-content">
+<div class="w-16 h-16 bg-emerald-100 text-accent rounded-full flex items-center justify-center text-3xl mx-auto mb-6 shadow-inner">
+<i class="fa-solid fa-check"></i>
+</div>
+<h3 class="text-2xl font-bold text-primary mb-2">Pendaftaran Berhasil!</h3>
+<p class="text-slate-600 text-sm font-light mb-8 leading-relaxed" id="modal-message">
+                Terima kasih, data Anda telah kami terima. Tim admin kami akan segera menghubungi Anda melalui WhatsApp untuk proses verifikasi.
+            </p>
+<button class="w-full bg-accent hover:bg-accent-hover text-white font-bold py-3.5 rounded-xl shadow-md transition-all" id="close-modal">
+                Tutup &amp; Kembali
+            </button>
+</div>
+</div>
+<!-- JavaScript for Interactivity -->
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // FAQ Accordion
+            const faqToggles = document.querySelectorAll('.faq-toggle');
+            faqToggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector('fa-chevron-down') || this.querySelector('i');
+                    
+                    // Close others
+                    faqToggles.forEach(other => {
+                        if (other !== this) {
+                            other.nextElementSibling.classList.add('hidden');
+                            const otherIcon = other.querySelector('i');
+                            if (otherIcon) otherIcon.style.transform = 'rotate(0deg)';
+                        }
+                    });
+
+                    // Toggle current
+                    content.classList.toggle('hidden');
+                    if (!content.classList.contains('hidden')) {
+                        icon.style.transform = 'rotate(180deg)';
+                    } else {
+                        icon.style.transform = 'rotate(0deg)';
+                    }
+                });
+            });
+
+            // Registration Form & Modal Handler
+            const registrationForm = document.getElementById('registration-form');
+            const successModal = document.getElementById('success-modal');
+            const modalContent = document.getElementById('modal-content');
+            const closeModalBtn = document.getElementById('close-modal');
+            const modalMessage = document.getElementById('modal-message');
+
+            registrationForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const nama = document.getElementById('nama').value;
+                const whatsapp = document.getElementById('whatsapp').value;
+                const program = document.getElementById('program-pilihan').value;
+                const domisili = document.getElementById('domisili').value;
+
+                modalMessage.innerHTML = `Terima kasih <b>${nama}</b> (${whatsapp}). Pendaftaran Anda untuk program <b>${program}</b> dari <b>${domisili}</b> berhasil dikirim. Tim admin kami akan segera menghubungi Anda melalui WhatsApp.`;
+
+                successModal.classList.remove('hidden');
+                setTimeout(() => {
+                    modalContent.classList.remove('scale-95', 'opacity-0');
+                    modalContent.classList.add('scale-100', 'opacity-100');
+                }, 10);
+            });
+
+            function closeModalFunc() {
+                modalContent.classList.remove('scale-100', 'opacity-100');
+                modalContent.classList.add('scale-95', 'opacity-0');
+                setTimeout(() => {
+                    successModal.classList.add('hidden');
+                    registrationForm.reset();
+                }, 200);
+            }
+
+            closeModalBtn.addEventListener('click', closeModalFunc);
+            successModal.addEventListener('click', function(e) {
+                if (e.target === successModal) {
+                    closeModalFunc();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
